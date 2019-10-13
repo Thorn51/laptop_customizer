@@ -1,9 +1,4 @@
 import React, { Component } from "react";
-
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
-import slugify from "slugify";
-
 import "./App.css";
 import CustomizeOptions from "./CustomizeOptions/CustomizeOptions";
 
@@ -36,9 +31,9 @@ class App extends Component {
     }
   };
 
-  updateFeature = (feature, newValue) => {
+  updateFeature = (obj, item) => {
     const selected = Object.assign({}, this.state.selected);
-    selected[feature] = newValue;
+    selected[obj] = item;
     this.setState({
       selected
     });
@@ -52,8 +47,9 @@ class App extends Component {
         </header>
         <main>
           <CustomizeOptions
+            selected={this.state.selected}
             features={this.props.features}
-            onSelect={() => this.updateFeature()}
+            updateFeature={(obj, item) => this.updateFeature(obj, item)}
           />
         </main>
       </div>

@@ -12,18 +12,22 @@ export default class CustomizeOptions extends React.Component {
         <h2>Customize your Laptop</h2>
         <ProcessorOption
           processorOptions={this.props.features.Processor}
-          onSelect={this.props.onSelect}
+          selected={this.props.selected.Processor}
+          updateFeature={this.props.updateFeature}
         />
         <OperatingSystemOption
           operatingSystem={this.props.features["Operating System"]}
+          selected={this.props.selected["Operating System"]}
           onSelect={this.props.onSelect}
         />
         <VideoCardOption
           videoCard={this.props.features["Video Card"]}
+          selected={this.props.selected["Video Card"]}
           onSelect={this.props.onSelect}
         />
         <DisplayOption
-          display={this.props.features.display}
+          display={this.props.features.Display}
+          selected={this.props.selected.Display}
           onSelect={this.props.onSelect}
         />
       </form>
