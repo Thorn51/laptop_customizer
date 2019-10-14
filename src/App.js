@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import CustomizeOptions from "./CustomizeOptions/CustomizeOptions";
+import Cart from "./Cart/Cart";
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -51,6 +52,8 @@ class App extends Component {
             features={this.props.features}
             updateFeature={(obj, item) => this.updateFeature(obj, item)}
           />
+
+          <Cart items={this.state.selected} />
         </main>
       </div>
     );
