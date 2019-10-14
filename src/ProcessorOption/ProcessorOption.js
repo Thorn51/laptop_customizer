@@ -21,9 +21,7 @@ export default class ProcessorOption extends React.Component {
             className="feature__option"
             name={slugify(processor.name)}
             checked={processor.name === this.props.selected.name}
-            onChange={e =>
-              this.props.updateFeature(this.props.processorOptions, processor)
-            }
+            onChange={e => this.props.updateFeature("Processor", processor)}
           />
           <label htmlFor={featureHash} className="feature__label">
             {processor.name} ({USCurrencyFormat.format(processor.cost)})

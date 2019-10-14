@@ -18,6 +18,7 @@ export default class OperatingSystemOption extends React.Component {
             className="feature__option"
             name={slugify(os.name)}
             checked={os.name === this.props.selected.name}
+            onChange={e => this.props.updateFeature("Operating System", os)}
           />
           <label htmlFor={featureHash} className="feature__label">
             {os.name} ({USCurrencyFormat.format(os.cost)})

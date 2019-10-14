@@ -19,6 +19,7 @@ export default class VideoCardOption extends React.Component {
             className="feature__option"
             name={slugify(videoCard.name)}
             checked={videoCard.name === this.props.selected.name}
+            onChange={e => this.props.updateFeature("Video Card", videoCard)}
           />
           <label htmlFor={featureHash} className="feature__label">
             {videoCard.name} ({USCurrencyFormat.format(videoCard.cost)})

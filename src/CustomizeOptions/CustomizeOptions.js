@@ -18,17 +18,17 @@ export default class CustomizeOptions extends React.Component {
         <OperatingSystemOption
           operatingSystem={this.props.features["Operating System"]}
           selected={this.props.selected["Operating System"]}
-          onSelect={this.props.onSelect}
+          updateFeature={this.props.updateFeature}
         />
         <VideoCardOption
           videoCard={this.props.features["Video Card"]}
           selected={this.props.selected["Video Card"]}
-          onSelect={this.props.onSelect}
+          updateFeature={this.props.updateFeature}
         />
         <DisplayOption
           display={this.props.features.Display}
           selected={this.props.selected.Display}
-          onSelect={this.props.onSelect}
+          updateFeature={this.props.updateFeature}
         />
       </form>
     );

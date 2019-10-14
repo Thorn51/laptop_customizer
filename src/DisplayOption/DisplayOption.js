@@ -19,6 +19,7 @@ export default class DisplayOption extends React.Component {
             className="feature__option"
             name={slugify(display.name)}
             checked={display.name === this.props.selected.name}
+            onChange={e => this.props.updateFeature("Display", display)}
           />
           <label htmlFor={featureHash} className="feature__label">
             {display.name} ({USCurrencyFormat.format(display.cost)})
