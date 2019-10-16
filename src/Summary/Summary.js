@@ -11,7 +11,6 @@ export default class Summary extends React.Component {
     const summary = Object.keys(this.props.costs).map((feature, idx) => {
       const featureHash = feature + "-" + idx;
       const selectedOption = this.props.costs[feature];
-      console.log(selectedOption);
       return (
         <div className="summary__option" key={featureHash}>
           <div className="summary__option__label">{feature} </div>
