@@ -43,7 +43,7 @@ class App extends Component {
           <CustomizeOptions
             selected={this.state.selected}
             features={this.props.features}
-            updateFeature={(feature, newValue) =>
+            onChange={(feature, newValue) =>
               this.updateFeature(feature, newValue)
             }
           />
